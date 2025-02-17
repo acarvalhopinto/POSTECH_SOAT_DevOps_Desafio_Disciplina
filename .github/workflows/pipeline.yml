@@ -48,7 +48,7 @@ jobs:
     if: github.ref == 'refs/heads/release'
     environment:
       name: pre
-    needs: build
+    needs: publish
     steps:
       - name: Deploy 
         shell: bash
@@ -61,7 +61,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     environment:
       name: prod
-    needs: build
+    needs: publish
     steps:
       - name: Deploy 
         shell: bash
