@@ -1,4 +1,5 @@
 name: pipeline
+
 on:
   push:
 
@@ -123,7 +124,7 @@ jobs:
       - name: Deploy 
         shell: bash
         run: |
-          sh 'src/main/scripts/testeFuncionais.sh'
+          sh 'src/main/scripts/testesFuncionais.sh'
 
   deploy-Prod:
     runs-on: ubuntu-latest
