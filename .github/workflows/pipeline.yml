@@ -174,7 +174,7 @@ jobs:
 
 
   deploy-azure:
-    needs: build  
+    needs: deploy-Prod  
     name: Deploy-azure
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'    
@@ -195,7 +195,7 @@ jobs:
             package: '${{ github.workspace }}/target/*.jar'
 
   deploy-aws:
-    needs: build  
+    needs: deploy-Prod  
     name: Deploy-aws
     runs-on: ubuntu-latest
    #if: github.ref == 'refs/heads/main'
